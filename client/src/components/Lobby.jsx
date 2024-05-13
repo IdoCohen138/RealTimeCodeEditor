@@ -7,7 +7,7 @@ import 'prismjs/themes/prism.css';
 import 'prismjs/components/prism-javascript'; 
 import Popup from "./Popup"; 
 
-const socket = io(process.env.REACT_APP_SERVER_URL);
+const socket = io("wss://realtimecodeeditor-production.up.railway.app");
 
 export default function Lobby() {
 
