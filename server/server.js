@@ -1,11 +1,9 @@
-// const express = require('express');
-// const http = require('http');
+
 const { Server } = require('socket.io');
 require('dotenv').config();
 const dbUtil = require("./db/db");
 
-// const app = express();
-// const server = http.createServer(app);
+
 const io = new Server(process.env.PORT, {
   cors: {
     origin: '*',
@@ -13,15 +11,10 @@ const io = new Server(process.env.PORT, {
   },
 });
 
-// server.listen(process.env.PORT, () => {
-//   console.log(`Server is listening on Port: ${process.env.PORT}`);
-// });
-
 const mentorSocket = new Map();
 const studentSocket = new Map();
 
 const dbPool = dbUtil.promisePool;
-console.log("dbPool:::::::::::", dbPool)
 
 console.log(`Server is listening on Port: ${process.env.PORT}`);
 
@@ -60,7 +53,6 @@ io.on('connection', (socket) => {
   socket.on("changeCode", async (code, index) => {
     try {
       const [rows] = await dbPool.query('SELECT code FROM solution WHERE title = ?', [index]);
-      console.log("-----------------------------row---------------------", rows[0])
       const dataCode = rows[0].code;
       const codeClean = cleanCode(code);
       const cleanDataCode = cleanCode(dataCode);
