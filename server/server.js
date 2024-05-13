@@ -21,6 +21,7 @@ const mentorSocket = new Map();
 const studentSocket = new Map();
 
 const dbPool = dbUtil.promisePool;
+console.log("dbPool:::::::::::", dbPool)
 
 console.log(`Server is listening on Port: ${process.env.PORT}`);
 
