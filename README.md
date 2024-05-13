@@ -1,7 +1,5 @@
 # Real Time Code Editor
 
-# Online Coding Web Application
-
 [Link]()
 
 ## Overview
