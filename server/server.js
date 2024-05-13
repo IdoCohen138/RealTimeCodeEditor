@@ -60,6 +60,7 @@ io.on('connection', (socket) => {
   socket.on("changeCode", async (code, index) => {
     try {
       const [rows] = await dbPool.query('SELECT code FROM solution WHERE title = ?', [index]);
+      console.log("-----------------------------row---------------------", rows[0])
       const dataCode = rows[0].code;
       const codeClean = cleanCode(code);
       const cleanDataCode = cleanCode(dataCode);
