@@ -1,6 +1,6 @@
 # Real Time Code Editor
 
-[Link]()
+[Link](blissful-determination-production.up.railway.app)
 
 ## Overview
 
@@ -31,13 +31,14 @@ Welcome to the Real Time Code Editor! This project is designed to facilitate rem
 
 ## Deployment
 
-The project is deployed using a microservices architecture:
+The project is deployed using a microservices architecture with Railway.app
 
-- **Client Service:** Hosted on AWS S3 platform.
-  - [AWS S3 Deployment Link]()
-- **Server and Database:** Hosted on Railway.app.
-  - [Railway.app Deployment Link](https://railway.app/)
-
+- **Client Service:** 
+  - React
+- **Server Service:** 
+  - Node.js
+- **Database Service:** 
+  - MySql
 
 
 
